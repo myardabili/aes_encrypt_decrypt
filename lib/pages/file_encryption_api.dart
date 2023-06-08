@@ -7,9 +7,7 @@ String? finalEncrypt;
 
 class FileEncryptionApi {
   static Future<Uint8List?> encryptFile(Uint8List data) async {
-    // final key = Key.fromSecureRandom(16);
     final key = Key.fromUtf8('my32lengthsupersecretnooneknows1');
-    // final iv = IV.fromLength(16);
     final iv = IV.fromUtf8('HgNRbGHbDSz9T0CC');
     final encrypter = Encrypter(AES(key, mode: AESMode.sic, padding: 'PKCS7'));
 

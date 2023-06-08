@@ -1,5 +1,5 @@
 import 'package:encrypt_decrypt_app/core.dart';
-import 'package:encrypt_decrypt_app/pages/home_screen.dart';
+import 'package:encrypt_decrypt_app/pages/main_navigation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -30,7 +30,7 @@ class LoginController extends State<LoginView> implements MvcController {
         password: password!,
       );
       Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => const HomeScreen()),
+          MaterialPageRoute(builder: (context) => const MainNavigation()),
           (route) => false);
     } on Exception catch (_) {
       showInfoDialog("Email atau Password salah!");
